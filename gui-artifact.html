@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Onnixus OS Mission Control (Mock GUI)</title>
+  <style>
+    :root{
+      --bg:#070b16; --panel:#101a30; --panel2:#132241; --ink:#e9efff; --muted:#9fb0da; --line:#29457f;
+      --blue:#6cc0ff; --green:#58d98f; --amber:#ffca6b; --purple:#b39bff;
+      --danger:#ff7a7a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1200px 600px at 10% -10%,#162a52 0%,transparent 45%),var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .sidebar{background:#0b1326;border-right:1px solid var(--line);padding:18px 14px}
+    .logo{font-weight:800;letter-spacing:.4px;margin-bottom:4px}
+    .sub{color:var(--muted);font-size:12px;margin-bottom:16px}
+    .nav button{all:unset;display:block;width:100%;padding:10px 12px;border-radius:10px;color:var(--muted);cursor:pointer;margin-bottom:6px;border:1px solid transparent}
+    .nav button.active{color:var(--ink);background:linear-gradient(180deg,#1a2b52,#152444);border-color:#3b5eaa}
+    .shell{padding:16px 18px}
+    .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .title{font-size:24px;font-weight:750}
+    .pill{padding:6px 10px;border-radius:999px;border:1px solid #2a467f;color:var(--blue);font-size:12px;background:#0f1b35}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:10px}
+    .kpi{background:linear-gradient(180deg,var(--panel),#0f1a33);border:1px solid var(--line);border-radius:12px;padding:12px}
+    .kpi .n{font-size:27px;font-weight:800}
+    .kpi .l{color:var(--muted);font-size:12px}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:10px}
+    .card{background:linear-gradient(180deg,var(--panel2),#111c35);border:1px solid var(--line);border-radius:12px;padding:12px}
+    .card h3{margin:0 0 8px;font-size:14px;letter-spacing:.2px;color:#dbe6ff}
+    .row{display:flex;justify-content:space-between;padding:9px 10px;border:1px solid #2a3f72;background:#0d1730;border-radius:10px;margin-bottom:7px}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    .muted{color:var(--muted)}
+    .tag{font-size:11px;border-radius:999px;padding:3px 8px;border:1px solid #446ab8}
+    .tag.lock{color:#ffd992;border-color:#a7863a}
+    .tag.open{color:#9de6be;border-color:#3b9b66}
+    .tag.snooze{color:#d7ccff;border-color:#6e61a3}
+    .diagram{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+    .node{border:1px solid #3d5f9d;background:#0f1b35;border-radius:10px;padding:10px}
+    .node b{display:block;margin-bottom:4px}
+    .toolbar{display:flex;gap:8px;margin-bottom:8px}
+    .btn{all:unset;padding:7px 10px;border:1px solid #36578f;border-radius:10px;background:#0f1b35;color:#d8e7ff;font-size:12px;cursor:pointer}
+    .btn.primary{border-color:#4a7cd5;background:#14306a}
+    .status{margin-top:8px;font-size:12px;color:#9fbbec}
+    .hidden{display:none}
+    @media (max-width:1200px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.app{grid-template-columns:220px 1fr}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">ONNIXUS MISSION CONTROL</div>
+      <div class="sub">mock recruiter-safe GUI</div>
+      <div class="nav">
+        <button class="active" data-tab="overview">Overview</button>
+        <button data-tab="queue">Decision Queue</button>
+        <button data-tab="packs">Content Packs</button>
+        <button data-tab="architecture">Architecture Web</button>
+      </div>
+    </aside>
+
+    <main class="shell">
+      <div class="top">
+        <div class="title">Onnixus OS Control Portal</div>
+        <div class="pill">MOCK DATA ONLY · NO PII</div>
+      </div>
+
+      <section id="overview" class="tab">
+        <div class="kpis">
+          <div class="kpi"><div class="n">03</div><div class="l">Open decisions</div></div>
+          <div class="kpi"><div class="n">01</div><div class="l">Requires founder approval</div></div>
+          <div class="kpi"><div class="n">02</div><div class="l">Automations running</div></div>
+          <div class="kpi"><div class="n">10.4s</div><div class="l">Heartbeat cycle latency</div></div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Unified decision inbox</h3>
+            <div class="row"><span class="mono">backlog:mock001</span><span class="tag lock">🔒 approve</span></div>
+            <div class="row"><span>Launch mock city trip + guide bundle</span><span class="muted">growth</span></div>
+            <div class="row"><span class="mono">backlog:mock002</span><span class="tag open">✅ open</span></div>
+            <div class="row"><span>Refresh mission-control architecture map</span><span class="muted">operations</span></div>
+          </div>
+          <div class="card">
+            <h3>Heartbeat</h3>
+            <div class="row"><span>last run</span><span class="mono">2026-06-30 16:24 UTC</span></div>
+            <div class="row"><span>queue rebuild</span><span class="tag open">healthy</span></div>
+            <div class="row"><span>snoozed filtering</span><span class="tag snooze">active</span></div>
+            <div class="status">Single-trigger background orchestration with deterministic IDs.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="queue" class="tab hidden">
+        <div class="card">
+          <h3>Decision Queue (mock)</h3>
+          <div class="toolbar">
+            <button class="btn primary" id="approve">Approve mock001</button>
+            <button class="btn" id="snooze">Snooze mock003</button>
+            <button class="btn" id="refresh">Refresh queue</button>
+          </div>
+          <div id="qlines"></div>
+          <div id="qstatus" class="status">Ready. Actions mutate mock local state only.</div>
+        </div>
+      </section>
+
+      <section id="packs" class="tab hidden">
+        <div class="grid">
+          <div class="card">
+            <h3>No-deploy content pack launcher</h3>
+            <div class="row"><span>pack_id</span><span class="mono">chicago-groups-v1</span></div>
+            <div class="row"><span>mode</span><span class="mono">dry-run | execute --confirm</span></div>
+            <div class="row"><span>trip</span><span class="tag open">created</span></div>
+            <div class="row"><span>guide</span><span class="tag open">created</span></div>
+            <div class="row"><span>social payload</span><span class="tag open">queued</span></div>
+          </div>
+          <div class="card">
+            <h3>Operator notes</h3>
+            <p class="muted">This screen mirrors the artifact runner behavior and demonstrates synchronized release without app deploy windows.</p>
+            <p class="muted">All examples here are synthetic and recruiter-safe.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" class="tab hidden">
+        <div class="card">
+          <h3>Logical-to-physical architecture web</h3>
+          <div class="diagram">
+            <div class="node"><b>Kernel (Agnostic)</b><span class="muted">_ops/dev/heartbeat.py</span></div>
+            <div class="node"><b>Planner Interface</b><span class="muted">daily planner + queue inbox</span></div>
+            <div class="node"><b>Queue State</b><span class="muted">queue-state.yaml / deterministic ids</span></div>
+            <div class="node"><b>Brand Context</b><span class="muted">loaded on routing layer</span></div>
+            <div class="node"><b>Artifacts</b><span class="muted">Mission Control SPA + reports</span></div>
+            <div class="node"><b>Physical Roots</b><span class="muted">~/Claude + ~/Documents/Onnixus</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const tabs = [...document.querySelectorAll('.tab')];
+    const nav = [...document.querySelectorAll('.nav button')];
+    nav.forEach(btn=>btn.addEventListener('click',()=>{
+      nav.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const t = btn.dataset.tab;
+      tabs.forEach(el=>el.classList.toggle('hidden', el.id!==t));
+    }));
+
+    let q = [
+      {id:'backlog:mock001', title:'Launch mock city trip + guide bundle', status:'open', stream:'growth', gate:'lock'},
+      {id:'backlog:mock002', title:'Refresh mission-control architecture map', status:'open', stream:'operations', gate:'open'},
+      {id:'backlog:mock003', title:'Draft partner-ready onboarding playbook', status:'snoozed', stream:'partnerships', gate:'snooze'},
+    ];
+    const icon = s => s==='lock'?'🔒':(s==='snooze'?'⏸':'✅');
+    const renderQ = ()=>{
+      const root = document.getElementById('qlines');
+      root.innerHTML='';
+      q.forEach(item=>{
+        const row = document.createElement('div');
+        row.className='row';
+        row.innerHTML = `<span><span class="mono">${item.id}</span> · ${item.title}</span><span class="tag ${item.gate}">${icon(item.gate)} ${item.status}</span>`;
+        root.appendChild(row);
+      });
+    };
+    renderQ();
+
+    document.getElementById('approve').onclick = ()=>{
+      const i = q.find(x=>x.id==='backlog:mock001');
+      if(i){i.status='approved'; i.gate='open';}
+      renderQ();
+      document.getElementById('qstatus').textContent='Approved backlog:mock001 in mock queue state.';
+    };
+    document.getElementById('snooze').onclick = ()=>{
+      const i = q.find(x=>x.id==='backlog:mock003');
+      if(i){i.status='snoozed:2026-08-01'; i.gate='snooze';}
+      renderQ();
+      document.getElementById('qstatus').textContent='Snoozed backlog:mock003 to 2026-08-01 (mock).';
+    };
+    document.getElementById('refresh').onclick = ()=>{
+      renderQ();
+      document.getElementById('qstatus').textContent='Queue refreshed from local mock state.';
+    };
+  </script>
+</body>
+</html>

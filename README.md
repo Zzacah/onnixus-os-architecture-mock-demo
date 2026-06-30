@@ -24,14 +24,23 @@ python3 scripts/make_demo_video.py
 ```
 
 ## Key files
+- `gui-artifact.html` (the actual mock GUI artifact)
 - `mock_data/backlog.mock.yaml`
 - `mock_data/queue_state.mock.yaml`
 - `scripts/mock_heartbeat.py`
 - `scripts/mock_pack_runner.py`
-- `scripts/make_demo_video.py`
+- `scripts/capture_gui_walkthrough.js`
+- `scripts/make_gui_walkthrough_video.py`
 - `demo/QUEUE.mock.md`
 - `demo/pack_run_report.mock.json`
-- `demo/onnixus-os-mock-demo.mp4`
+- `demo/onnixus-os-gui-walkthrough.mp4`
+
+## GUI walkthrough video
+The walkthrough video captures real interactions in `gui-artifact.html`:
+- Overview tab
+- Decision Queue actions (approve and snooze)
+- Content Packs tab
+- Architecture Web tab
 
 ## Why this artifact
 This package gives a concrete, inspectable demonstration of architecture and working outputs without exposing any sensitive operational context.

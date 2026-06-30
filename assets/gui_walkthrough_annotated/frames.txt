@@ -1,0 +1,15 @@
+file '/Users/zachscott/Claude/Projects/Onnixus Technologies/_ops/careers/smartcat-5838436004/onnixus-os-mock-demo/assets/gui_walkthrough_annotated/frame_01_overview.png'
+duration 2.2
+file '/Users/zachscott/Claude/Projects/Onnixus Technologies/_ops/careers/smartcat-5838436004/onnixus-os-mock-demo/assets/gui_walkthrough_annotated/frame_02_queue_open.png'
+duration 2.2
+file '/Users/zachscott/Claude/Projects/Onnixus Technologies/_ops/careers/smartcat-5838436004/onnixus-os-mock-demo/assets/gui_walkthrough_annotated/frame_03_queue_approve.png'
+duration 2.2
+file '/Users/zachscott/Claude/Projects/Onnixus Technologies/_ops/careers/smartcat-5838436004/onnixus-os-mock-demo/assets/gui_walkthrough_annotated/frame_04_queue_snooze.png'
+duration 2.2
+file '/Users/zachscott/Claude/Projects/Onnixus Technologies/_ops/careers/smartcat-5838436004/onnixus-os-mock-demo/assets/gui_walkthrough_annotated/frame_05_packs.png'
+duration 2.2
+file '/Users/zachscott/Claude/Projects/Onnixus Technologies/_ops/careers/smartcat-5838436004/onnixus-os-mock-demo/assets/gui_walkthrough_annotated/frame_06_architecture.png'
+duration 2.2
+file '/Users/zachscott/Claude/Projects/Onnixus Technologies/_ops/careers/smartcat-5838436004/onnixus-os-mock-demo/assets/gui_walkthrough_annotated/frame_07_overview_return.png'
+duration 2.2
+file '/Users/zachscott/Claude/Projects/Onnixus Technologies/_ops/careers/smartcat-5838436004/onnixus-os-mock-demo/assets/gui_walkthrough_annotated/frame_07_overview_return.png'
