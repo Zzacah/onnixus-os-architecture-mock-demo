@@ -1,0 +1,9 @@
+{
+  "pack_id": "chicago-groups-v1",
+  "mode": "execute",
+  "result": "executed",
+  "trip_created": true,
+  "guide_created": true,
+  "social_payload_ready": true,
+  "uses_mock_data_only": true
+}

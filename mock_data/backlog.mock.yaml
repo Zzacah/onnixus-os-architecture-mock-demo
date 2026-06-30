@@ -1,0 +1,16 @@
+items:
+  - id: backlog:mock001
+    stream: growth
+    title: Launch mock city trip + guide bundle
+    status: open
+    requires_approval: true
+  - id: backlog:mock002
+    stream: operations
+    title: Refresh mission-control architecture map
+    status: open
+    requires_approval: false
+  - id: backlog:mock003
+    stream: partnerships
+    title: Draft partner-ready onboarding playbook
+    status: snoozed:2026-08-01
+    requires_approval: true

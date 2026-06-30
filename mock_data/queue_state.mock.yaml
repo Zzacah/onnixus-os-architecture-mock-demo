@@ -1,0 +1,14 @@
+backlog:mock001:
+  source: backlog
+  status: approved
+  stream: growth
+  approved_at: '2026-06-30'
+backlog:mock002:
+  source: backlog
+  status: open
+  stream: operations
+backlog:mock003:
+  source: backlog
+  status: snoozed
+  stream: partnerships
+  snoozed_until: '2026-08-01'
