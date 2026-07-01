@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Onnixus OS Mission Control (Mock GUI)</title>
+  <title>Onnixus OS Mission Control (Real-Structure Skeleton)</title>
   <style>
     :root{
       --bg:#070b16; --panel:#101a30; --panel2:#132241; --ink:#e9efff; --muted:#9fb0da; --line:#29457f;
       --blue:#6cc0ff; --green:#58d98f; --amber:#ffca6b; --purple:#b39bff;
-      --danger:#ff7a7a;
     }
     *{box-sizing:border-box}
     body{margin:0;background:radial-gradient(1200px 600px at 10% -10%,#162a52 0%,transparent 45%),var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    .app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .app{display:grid;grid-template-columns:270px 1fr;min-height:100vh}
     .sidebar{background:#0b1326;border-right:1px solid var(--line);padding:18px 14px}
     .logo{font-weight:800;letter-spacing:.4px;margin-bottom:4px}
     .sub{color:var(--muted);font-size:12px;margin-bottom:16px}
@@ -29,33 +28,35 @@
     .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:10px}
     .card{background:linear-gradient(180deg,var(--panel2),#111c35);border:1px solid var(--line);border-radius:12px;padding:12px}
     .card h3{margin:0 0 8px;font-size:14px;letter-spacing:.2px;color:#dbe6ff}
-    .row{display:flex;justify-content:space-between;padding:9px 10px;border:1px solid #2a3f72;background:#0d1730;border-radius:10px;margin-bottom:7px}
+    .row{display:flex;justify-content:space-between;padding:9px 10px;border:1px solid #2a3f72;background:#0d1730;border-radius:10px;margin-bottom:7px;gap:10px}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
     .muted{color:var(--muted)}
-    .tag{font-size:11px;border-radius:999px;padding:3px 8px;border:1px solid #446ab8}
+    .tag{font-size:11px;border-radius:999px;padding:3px 8px;border:1px solid #446ab8;white-space:nowrap}
     .tag.lock{color:#ffd992;border-color:#a7863a}
     .tag.open{color:#9de6be;border-color:#3b9b66}
     .tag.snooze{color:#d7ccff;border-color:#6e61a3}
-    .diagram{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-    .node{border:1px solid #3d5f9d;background:#0f1b35;border-radius:10px;padding:10px}
-    .node b{display:block;margin-bottom:4px}
     .toolbar{display:flex;gap:8px;margin-bottom:8px}
     .btn{all:unset;padding:7px 10px;border:1px solid #36578f;border-radius:10px;background:#0f1b35;color:#d8e7ff;font-size:12px;cursor:pointer}
     .btn.primary{border-color:#4a7cd5;background:#14306a}
     .status{margin-top:8px;font-size:12px;color:#9fbbec}
     .hidden{display:none}
-    @media (max-width:1200px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.app{grid-template-columns:220px 1fr}}
+    pre{margin:0;background:#0c1630;border:1px solid #2a3e6e;border-radius:10px;padding:10px;white-space:pre-wrap;color:#c9dcff}
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    th,td{border-bottom:1px solid #2a3f72;padding:8px;text-align:left}
+    a{color:#8bc8ff}
+    @media (max-width:1260px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.app{grid-template-columns:220px 1fr}}
   </style>
 </head>
 <body>
   <div class="app">
     <aside class="sidebar">
       <div class="logo">ONNIXUS MISSION CONTROL</div>
-      <div class="sub">mock recruiter-safe GUI</div>
+      <div class="sub">real-structure skeleton · recruiter-safe</div>
       <div class="nav">
         <button class="active" data-tab="overview">Overview</button>
         <button data-tab="queue">Decision Queue</button>
         <button data-tab="packs">Content Packs</button>
+        <button data-tab="skeleton">Code Skeleton</button>
         <button data-tab="architecture">Architecture Web</button>
       </div>
     </aside>
@@ -63,37 +64,37 @@
     <main class="shell">
       <div class="top">
         <div class="title">Onnixus OS Control Portal</div>
-        <div class="pill">MOCK DATA ONLY · NO PII</div>
+        <div class="pill">MOCK DATA ONLY · NO PII · SANITIZED</div>
       </div>
 
       <section id="overview" class="tab">
         <div class="kpis">
-          <div class="kpi"><div class="n">03</div><div class="l">Open decisions</div></div>
-          <div class="kpi"><div class="n">01</div><div class="l">Requires founder approval</div></div>
-          <div class="kpi"><div class="n">02</div><div class="l">Automations running</div></div>
-          <div class="kpi"><div class="n">10.4s</div><div class="l">Heartbeat cycle latency</div></div>
+          <div class="kpi"><div class="n">08</div><div class="l">OS files mirrored in skeleton</div></div>
+          <div class="kpi"><div class="n">03</div><div class="l">Brand context trees mirrored</div></div>
+          <div class="kpi"><div class="n">01</div><div class="l">Heartbeat orchestrator represented</div></div>
+          <div class="kpi"><div class="n">24</div><div class="l">Prompt markers extracted</div></div>
         </div>
         <div class="grid">
           <div class="card">
-            <h3>Unified decision inbox</h3>
-            <div class="row"><span class="mono">backlog:mock001</span><span class="tag lock">🔒 approve</span></div>
-            <div class="row"><span>Launch mock city trip + guide bundle</span><span class="muted">growth</span></div>
-            <div class="row"><span class="mono">backlog:mock002</span><span class="tag open">✅ open</span></div>
-            <div class="row"><span>Refresh mission-control architecture map</span><span class="muted">operations</span></div>
+            <h3>What this artifact proves</h3>
+            <div class="row"><span>Kernel orchestration</span><span class="mono">_ops/dev/heartbeat.py</span></div>
+            <div class="row"><span>Agent prompts + manifests</span><span class="mono">/Scheduled/*/SKILL.md</span></div>
+            <div class="row"><span>On-demand routing harness</span><span class="mono">_ops/agents/on-demand/onnixus-router.md</span></div>
+            <div class="row"><span>Brand context references</span><span class="mono">~/Documents/Ventures/Products/*</span></div>
           </div>
           <div class="card">
-            <h3>Heartbeat</h3>
-            <div class="row"><span>last run</span><span class="mono">2026-06-30 16:24 UTC</span></div>
-            <div class="row"><span>queue rebuild</span><span class="tag open">healthy</span></div>
-            <div class="row"><span>snoozed filtering</span><span class="tag snooze">active</span></div>
-            <div class="status">Single-trigger background orchestration with deterministic IDs.</div>
+            <h3>Safety boundary</h3>
+            <div class="row"><span>Public package type</span><span class="tag open">structure-only</span></div>
+            <div class="row"><span>File contents from Documents</span><span class="tag lock">not copied</span></div>
+            <div class="row"><span>Sensitive names</span><span class="tag snooze">redacted</span></div>
+            <div class="status">All paths are shown as sanitized skeleton references. No production data in this demo.</div>
           </div>
         </div>
       </section>
 
       <section id="queue" class="tab hidden">
         <div class="card">
-          <h3>Decision Queue (mock)</h3>
+          <h3>Decision Queue (mock interaction)</h3>
           <div class="toolbar">
             <button class="btn primary" id="approve">Approve mock001</button>
             <button class="btn" id="snooze">Snooze mock003</button>
@@ -115,24 +116,60 @@
             <div class="row"><span>social payload</span><span class="tag open">queued</span></div>
           </div>
           <div class="card">
-            <h3>Operator notes</h3>
-            <p class="muted">This screen mirrors the artifact runner behavior and demonstrates synchronized release without app deploy windows.</p>
-            <p class="muted">All examples here are synthetic and recruiter-safe.</p>
+            <h3>Operational purpose</h3>
+            <p class="muted">Demonstrates release coordination without deploy windows while preserving explicit operator confirmation gates.</p>
+            <p class="muted">Mirrors current Onnixus no-deploy pack pattern using synthetic inputs.</p>
           </div>
+        </div>
+      </section>
+
+      <section id="skeleton" class="tab hidden">
+        <div class="grid">
+          <div class="card">
+            <h3>Onnixus OS files mirrored (sanitized excerpts)</h3>
+            <table>
+              <tr><th>Role</th><th>Source shape</th></tr>
+              <tr><td>Config registry</td><td class="mono">skeleton/onnixus-os/config.excerpt.md</td></tr>
+              <tr><td>Agent index</td><td class="mono">skeleton/onnixus-os/agents_index.excerpt.md</td></tr>
+              <tr><td>Standard preamble</td><td class="mono">skeleton/onnixus-os/standard_preamble.excerpt.md</td></tr>
+              <tr><td>Heartbeat orchestrator</td><td class="mono">skeleton/onnixus-os/heartbeat_orchestrator.excerpt.md</td></tr>
+              <tr><td>Router harness</td><td class="mono">skeleton/onnixus-os/router_harness.excerpt.md</td></tr>
+              <tr><td>Daily planner prompt</td><td class="mono">skeleton/onnixus-os/daily_planner.excerpt.md</td></tr>
+              <tr><td>Content engine prompt</td><td class="mono">skeleton/onnixus-os/content_engine.excerpt.md</td></tr>
+              <tr><td>Strategy research prompt</td><td class="mono">skeleton/onnixus-os/strategy_research.excerpt.md</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Prompt / orchestration markers</h3>
+            <pre class="mono">daily_planner: "Draft today's plan ... only write AFTER Zach approves"
+content_engine: "Draft-to-approve; never publishes"
+strategy_research: "PROPOSE only. Never publish, send, message, commit, or move money"
+router_harness: requires_approval: external_send, publish, money_movement
+heartbeat.py: consolidated background steps + queue rebuild logic</pre>
+          </div>
+        </div>
+        <div class="card" style="margin-top:10px">
+          <h3>Documents context skeleton per brand (TG4B included)</h3>
+          <table>
+            <tr><th>Brand context root</th><th>Skeleton path</th><th>Sections mirrored</th></tr>
+            <tr><td class="mono">~/Documents/Ventures/Products/TripGoGo</td><td class="mono">skeleton/contexts/TripGoGo/README.md</td><td>28</td></tr>
+            <tr><td class="mono">~/Documents/Ventures/Products/SplitGoGo</td><td class="mono">skeleton/contexts/SplitGoGo/README.md</td><td>10</td></tr>
+            <tr><td class="mono">~/Documents/Ventures/Products/TripGoGo for Business</td><td class="mono">skeleton/contexts/TripGoGo-for-Business/README.md</td><td>10</td></tr>
+          </table>
+          <div class="status">This gives the "pretend TG4B is built" representation by mirroring its context tree in the same standardized structure.</div>
         </div>
       </section>
 
       <section id="architecture" class="tab hidden">
         <div class="card">
-          <h3>Logical-to-physical architecture web</h3>
-          <div class="diagram">
-            <div class="node"><b>Kernel (Agnostic)</b><span class="muted">_ops/dev/heartbeat.py</span></div>
-            <div class="node"><b>Planner Interface</b><span class="muted">daily planner + queue inbox</span></div>
-            <div class="node"><b>Queue State</b><span class="muted">queue-state.yaml / deterministic ids</span></div>
-            <div class="node"><b>Brand Context</b><span class="muted">loaded on routing layer</span></div>
-            <div class="node"><b>Artifacts</b><span class="muted">Mission Control SPA + reports</span></div>
-            <div class="node"><b>Physical Roots</b><span class="muted">~/Claude + ~/Documents/Onnixus</span></div>
-          </div>
+          <h3>Logical-to-physical architecture map</h3>
+          <pre class="mono">Kernel (agnostic)      -> ~/Claude/Projects/Onnixus Technologies/_ops/dev/heartbeat.py
+Agent instruction layer -> ~/Claude/Scheduled/*/SKILL.md + _ops/agents/on-demand/*.md
+Execution state         -> _ops/backlog.md + _ops/queue-state.yaml + _ops/QUEUE.md
+Context loading layer   -> ~/Documents/Ventures/Products/{TripGoGo|SplitGoGo|TripGoGo for Business}
+GUI artifact            -> gui-artifact.html + demo/onnixus-os-gui-walkthrough.mp4
+Public safe package     -> skeleton/* (sanitized structure + prompt excerpts)</pre>
+          <div class="status">Single control portal ties architecture, prompts, orchestration, and context mapping into one recruiter-reviewable surface.</div>
         </div>
       </section>
     </main>
@@ -149,9 +186,9 @@
     }));
 
     let q = [
-      {id:'backlog:mock001', title:'Launch mock city trip + guide bundle', status:'open', stream:'growth', gate:'lock'},
-      {id:'backlog:mock002', title:'Refresh mission-control architecture map', status:'open', stream:'operations', gate:'open'},
-      {id:'backlog:mock003', title:'Draft partner-ready onboarding playbook', status:'snoozed', stream:'partnerships', gate:'snooze'},
+      {id:'backlog:mock001', title:'Launch mock city trip + guide bundle', status:'open', gate:'lock'},
+      {id:'backlog:mock002', title:'Refresh mission-control architecture map', status:'open', gate:'open'},
+      {id:'backlog:mock003', title:'Draft partner-ready onboarding playbook', status:'snoozed', gate:'snooze'},
     ];
     const icon = s => s==='lock'?'🔒':(s==='snooze'?'⏸':'✅');
     const renderQ = ()=>{

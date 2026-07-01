@@ -36,6 +36,10 @@ const fs = require('fs');
   await page.waitForTimeout(250);
   await snap('packs');
 
+  await page.click('button[data-tab="skeleton"]');
+  await page.waitForTimeout(250);
+  await snap('skeleton');
+
   await page.click('button[data-tab="architecture"]');
   await page.waitForTimeout(250);
   await snap('architecture');
